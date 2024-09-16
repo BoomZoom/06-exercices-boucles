@@ -1,0 +1,65 @@
+ /* Модальное окно */
+ .modal {
+    display: none; /* Скрываем окно по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: center no-repeat url('https://static.vecteezy.com/system/resources/previews/044/853/866/non_2x/comic-book-page-background-with-halftone-effect-illustration-vector.jpg');*/
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контент модального окна */
+.modal-content {
+    background-color: #5fdea3;
+    padding: 20px;
+    border: 20px solid #ff0000; /* Стиль в стиле Marvel */
+    border-image: url('../svg/border.svg') 30 stretch;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+}
+
+/* Стиль input */
+.modal-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    /*margin-bottom: 20px;*/
+
+    margin: 20px 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background-color: #222;
+    color: #ffcc00;
+    border: 5px solid #ff0000;
+    outline: none;
+    box-shadow: 2px 2px 0 #000000, 4px 4px 0 #ffcc00;
+    transition: all 0.3s ease;
+}
+
+/* Стиль кнопки */
+.modal-button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 #000000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: #ffcc00;
+    color: #000;
+}

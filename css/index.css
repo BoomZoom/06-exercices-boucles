@@ -1,0 +1,169 @@
+:root {
+    /* Основные цвета темы */
+    --primary-bg-color: #5fdea3;    /* Зеленый фон */
+    --primary-text-color: #24523c;  /* Темно-зеленый цвет текста */
+
+    --accent-bg-color: #ff0000;     /* Красный фон */
+    --accent-bg-hover-color: #ffcc00; /* Желтый фон при наведении */
+    --accent-text-color: white;     /* Белый цвет текста для кнопок */
+
+    --secondary-bg-color: #ffcc00;  /* Желтый фон */
+    --secondary-text-color: #222;   /* Черный цвет текста */
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: center no-repeat   url(https://static.vecteezy.com/system/resources/previews/044/853/866/non_2x/comic-book-page-background-with-halftone-effect-illustration-vector.jpg);
+    background-size: cover;
+}
+
+.console{
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+
+    box-sizing: border-box;
+    padding: 10px;
+
+    /* max-height: calc(100vh - 100px); */
+    max-height: 90%;
+    
+    margin-bottom: 300px;
+    
+    border-width: 20px;
+    border-style: solid;
+    border-image: url('../svg/border.svg') 30 stretch;
+
+    background-color: #5fdea3;
+    color: #24523c;
+}
+
+.log-container{
+    margin-bottom: 20px;
+    padding-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-grow: 1;
+
+    font-family: Arial, sans-serif;
+
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+h2 {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 36px;
+    color: #ff0000;
+    text-shadow: 2px 2px 0 #000000, 4px 4px 0 #ffcc00; 
+    margin: 0;
+    padding: 10px;
+}
+
+.log-container .log-group {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    width: 100%;
+}
+
+.log-container .log-message{
+    max-width: 470px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.log-container .log-group:last-child{
+    margin-bottom: 0;
+}
+
+.log-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.log-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); 
+}
+
+.log-container::-webkit-scrollbar-thumb {
+    background: #ff0000; 
+    border-radius: 10px;
+}
+
+.log-container::-webkit-scrollbar-thumb:hover {
+    background: #ffcc00;
+}
+
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #222;
+    border-radius: 5px;
+}
+
+.console-input {
+    flex-grow: 1; 
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px; 
+    background-color: #5fdea3;
+    color: #222;
+}
+
+textarea.console-input {
+    height: 150px;
+}
+
+.console-input::-webkit-input-placeholder{
+    color: #24523c;
+}
+
+.console-input:focus {
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px var(--accent-bg-color); 
+    background-color: var(--secondary-bg-color); 
+    color: var(--secondary-text-color); 
+}
+
+.send-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
