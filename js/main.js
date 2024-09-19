@@ -196,33 +196,35 @@ async function Exercice9(){
     while (!trouve) {
         // Utilisation de template literals pour afficher le résultat
         // nombreDevine = parseInt(prompt(`${resultat} Essayez encore, chiffre de 1 à 10 (ou appuyez sur Annuler pour quitter) :`), 10);
-        nombreDevine = parseInt(await showModalBlock(`${resultat} Essayez encore, chiffre de 1 à 10 (ou appuyez sur Annuler pour quitter) :`, 0));
+        nombreDevine = parseInt(await showModalBlock(`${resultat} Essayez encore, chiffre de 1 à 10 (ou appuyez sur Annuler pour quitter) :`,
+            //nombreDevine
+            nombreMystere
+        ));
 
         if (isNaN(nombreDevine)) {
-            // alert("Veuillez entrer un nombre valide.");
+            console.log("Veuillez entrer un nombre valide.");
             resultat = "Entrée invalide.";
         } else if (nombreDevine < 1 || nombreDevine > 10) {
-            // alert("Le nombre doit être entre 1 et 10.");
+            console.log("Le nombre doit être entre 1 et 10.");
             resultat = "Nombre hors de portée.";
         } else if (nombreDevine < nombreMystere) {
             resultat = "Trop petit";
         } else if (nombreDevine > nombreMystere) {
             resultat = "Trop grand";
         } else {
-            // alert(`Bravo ! Vous avez trouvé le nombre mystère : ${nombreMystere}.`);
-            trouve = true; // Met fin à la boucle
+            console.log(`Bravo ! Vous avez trouvé le nombre mystère : ${nombreMystere}.`);
+            trouve = true; 
         }
     }
 
     // Demander si l'utilisateur veut jouer à nouveau
-    const rejouer = confirm("Voulez-vous jouer à nouveau ?");
+    const rejouer = await showModalBlockConfirm("Voulez-vous jouer à nouveau ?");
     if (rejouer) {
-        jeuDeDevinette(); // Relancer le jeu
+        Exercice9(); // Relancer le jeu
     } else {
-        alert("Merci d'avoir joué !");
+        console.log("Merci d'avoir joué !");
     }
     
-
 }
 
 async function executeExercises() {
