@@ -1,4 +1,4 @@
-import showModal, {showModalBlock} from './src/modal.js'
+import showModal, {showModalBlock,showModalBlockConfirm} from './src/modal.js'
 
 
 function Exercice1() {
@@ -197,8 +197,8 @@ async function Exercice9(){
         // Utilisation de template literals pour afficher le résultat
         // nombreDevine = parseInt(prompt(`${resultat} Essayez encore, chiffre de 1 à 10 (ou appuyez sur Annuler pour quitter) :`), 10);
         nombreDevine = parseInt(await showModalBlock(`${resultat} Essayez encore, chiffre de 1 à 10 (ou appuyez sur Annuler pour quitter) :`,
-            //nombreDevine
-            nombreMystere
+            nombreDevine
+            // nombreMystere
         ));
 
         if (isNaN(nombreDevine)) {
@@ -216,9 +216,10 @@ async function Exercice9(){
             trouve = true; 
         }
     }
-
+    console.log("Merci !");
     // Demander si l'utilisateur veut jouer à nouveau
     const rejouer = await showModalBlockConfirm("Voulez-vous jouer à nouveau ?");
+    console.log(rejouer)
     if (rejouer) {
         Exercice9(); // Relancer le jeu
     } else {
@@ -228,14 +229,14 @@ async function Exercice9(){
 }
 
 async function executeExercises() {
-    //  Exercice1();
-    //  Exercice2();
-    //  Exercice3();
-    //  Exercice4();
-    //  Exercice5();
-    //  Exercice6();
-    //  Exercice7();
-    //  Exercice8();
+    Exercice1();
+    Exercice2();
+    Exercice3();
+    Exercice4();
+    Exercice5();
+    Exercice6();
+    Exercice7();
+    Exercice8();
     await Exercice9();
 }
 

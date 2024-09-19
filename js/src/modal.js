@@ -164,7 +164,6 @@ function applyModalStyles(modal, modalContent, modalButton, cancelButton, modalH
     modal.style.left = '0';
     modal.style.width = '100vw';
     modal.style.height = '100vh';
-    // modal.style.background = "center no-repeat url('https://static.vecteezy.com/system/resources/previews/044/853/866/non_2x/comic-book-page-background-with-halftone-effect-illustration-vector.jpg')";
     modal.style.backgroundSize = 'cover';
     modal.style.justifyContent = 'center';
     modal.style.alignItems = 'center';
@@ -174,7 +173,7 @@ function applyModalStyles(modal, modalContent, modalButton, cancelButton, modalH
     modalContent.style.backgroundColor = '#5fdea3';
     modalContent.style.padding = '20px';
     modalContent.style.border = '20px solid #ff0000';
-    modalContent.style.borderImage = "url('../svg/border.svg') 30 stretch";
+    modalContent.style.borderImage = "url('./svg/border.svg') 30 stretch";
     modalContent.style.width = '400px';
     modalContent.style.textAlign = 'center';
     modalContent.style.borderRadius = '10px';
@@ -188,6 +187,7 @@ function applyModalStyles(modal, modalContent, modalButton, cancelButton, modalH
 
     // Стили для кнопок
     const buttonStyle = (button, backgroundColor, hoverColor) => {
+        button.style.margin = '20px 10px';
         button.style.padding = '10px 20px';
         button.style.backgroundColor = backgroundColor;
         button.style.color = '#fff';
